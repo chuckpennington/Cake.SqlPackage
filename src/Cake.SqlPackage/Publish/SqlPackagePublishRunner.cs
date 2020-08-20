@@ -26,9 +26,9 @@ namespace Cake.SqlPackage
         {
             var builder = CreateBuilder(settings);
 
-            if (settings.OutputPath != null)
+            if (settings.DeployScriptPath != null)
             {
-                builder.Append($"/{nameof(settings.OutputPath)}:\"{settings.OutputPath.MakeAbsolute(Environment.WorkingDirectory).FullPath}\"");
+                builder.Append($"/{nameof(settings.DeployScriptPath)}:\"{settings.DeployScriptPath.MakeAbsolute(Environment.WorkingDirectory).FullPath}\"");
             }
 
             if (settings.OverwriteFiles.HasValue)
